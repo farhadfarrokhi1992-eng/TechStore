@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechStore | فروشگاه تکنولوژی</title>
+
+    <meta name="description"
+        content="فروشگاه TechStore برای خرید لپ‌تاپ و لوازم جانبی کامپیوتر">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- سربرگ -->
+    <header id="home">
+        <h1>به TechStore خوش آمدید</h1>
+        <p>فروشگاه آنلاین محصولات دیجیتال</p>
+    </header>
+
+    <!-- منوی اصلی -->
+    <nav>
+        <ul>
+            <li><a href="#home">خانه</a></li>
+            <li><a href="pages/products.html">محصولات</a></li>
+            <li><a href="#about">درباره ما</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- جستجو -->
+        <section id="search">
+            <h2>جستجوی محصولات</h2>
+
+            <form>
+                <label for="search-input">نام محصول:</label>
+                <input type="search" id="search-input"
+                    placeholder="نام محصول را وارد کنید">
+
+                <button type="button">جستجو</button>
+            </form>
+        </section>
+
+        <!-- ثبت نام -->
+        <section id="register">
+            <h2>ثبت نام</h2>
+
+            <form>
+                <label for="first-name">نام:</label>
+                <input type="text" id="first-name" required>
+
+                <label for="last-name">نام خانوادگی:</label>
+                <input type="text" id="last-name" required>
+
+                <label for="register-email">ایمیل:</label>
+                <input type="email" id="register-email" required>
+
+                <label for="register-password">رمز عبور:</label>
+                <input type="password" id="register-password"
+                    minlength="8" required>
+
+                <p>جنسیت:</p>
+
+                <label>
+                    <input type="radio" name="gender" value="male">
+                    مرد
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    زن
+                </label>
+
+                <label>
+                    <input type="checkbox" required>
+                    قوانین را می‌پذیرم
+                </label>
+
+                <button type="button">ثبت نام</button>
+            </form>
+        </section>
+
+        <!-- ورود -->
+        <section id="login">
+            <h2>ورود به حساب کاربری</h2>
+
+            <form>
+                <label for="login-email">ایمیل:</label>
+                <input type="email" id="login-email" required>
+
+                <label for="login-password">رمز عبور:</label>
+                <input type="password" id="login-password" required>
+
+                <button type="button">ورود</button>
+            </form>
+        </section>
+
+        <!-- دسته بندی -->
+        <section id="categories">
+            <h2>دسته‌بندی محصولات</h2>
+
+            <ul>
+                <li>لپ‌تاپ</li>
+                <li>موس</li>
+                <li>کیبورد</li>
+                <li>مانیتور</li>
+            </ul>
+        </section>
+
+        <!-- محصولات -->
+        <section id="products">
+            <h2>محصولات ویژه</h2>
+
+            <article>
+                <div class="product-image">
+                    <span class="discount-badge">تخفیف ویژه</span>
+                    <img src="images/laptop.jpg" alt="لپ تاپ">
+                </div>
+
+                <h3>لپ‌تاپ</h3>
+                <p>مناسب برای کار و برنامه‌نویسی</p>
+                <p>قیمت: ۳۰ میلیون تومان</p>
+                <button type="button">مشاهده محصول</button>
+            </article>
+
+            <article>
+                <div class="product-image">
+                    <img src="images/mouse.jpg" alt="موس کامپیوتر">
+                </div>
+
+                <h3>موس</h3>
+                <p>موس مناسب کارهای روزمره</p>
+                <p>قیمت: ۵۰۰ هزار تومان</p>
+                <button type="button">مشاهده محصول</button>
+            </article>
+        </section>
+
+        <!-- جدول مقایسه -->
+        <section id="comparison">
+            <h2>مقایسه محصولات</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>محصول</th>
+                            <th>قیمت</th>
+                            <th>کاربرد</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>لپ‌تاپ</td>
+                            <td>۳۰ میلیون تومان</td>
+                            <td>کار و برنامه‌نویسی</td>
+                        </tr>
+
+                        <tr>
+                            <td>موس</td>
+                            <td>۵۰۰ هزار تومان</td>
+                            <td>استفاده روزمره</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- تماس -->
+        <section id="contact">
+            <h2>تماس با ما</h2>
+
+            <form>
+                <label for="city">شهر:</label>
+
+                <select id="city">
+                    <option value="">انتخاب شهر</option>
+                    <option value="tehran">تهران</option>
+                    <option value="shiraz">شیراز</option>
+                    <option value="tabriz">تبریز</option>
+                </select>
+
+                <label for="message">پیام شما:</label>
+
+                <textarea id="message" rows="5"
+                    placeholder="پیام خود را بنویسید"></textarea>
+
+                <button type="button">ارسال پیام</button>
+            </form>
+        </section>
+
+        <!-- درباره ما -->
+        <section id="about">
+            <h2>درباره TechStore</h2>
+            <p>
+                TechStore یک فروشگاه آموزشی برای معرفی و فروش محصولات دیجیتال است.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- پاورقی -->
+    <footer>
+        <p>تمام حقوق برای TechStore محفوظ است.</p>
+    </footer>
+
+    <!-- بازگشت به بالا -->
+    <a href="#home" class="back-to-top">بازگشت به بالا ↑</a>
+
+</body>
+</html>

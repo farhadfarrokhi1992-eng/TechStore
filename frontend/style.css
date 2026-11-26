@@ -1,0 +1,446 @@
+
+/* =========================
+   تنظیمات کلی سایت
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background-color: #f4f6f9;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+main {
+    width: 85%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+
+/* =========================
+   سربرگ سایت
+========================= */
+
+header {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0;
+    animation: fadeIn 2s ease 2;
+    animation-delay: 1s;
+}
+
+
+/* =========================
+   انیمیشن سربرگ
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   منوی اصلی
+========================= */
+
+nav {
+    background-color: #2563eb;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+
+/* =========================
+   بخش های سایت
+========================= */
+
+section {
+    background-color: white;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: #1e40af;
+    margin-top: 0;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+
+/* =========================
+   فرم ها
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   دکمه ها
+========================= */
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   دسته بندی ها
+========================= */
+
+#categories ul {
+    padding-right: 25px;
+}
+
+
+/* =========================
+   محصولات
+========================= */
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#products h2 {
+    grid-column: 1 / -1;
+}
+
+#products article {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+    overflow: hidden;
+    animation: cardEntrance 0.8s ease;
+}
+
+#products article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   انیمیشن کارت محصولات
+========================= */
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   تصاویر محصولات
+========================= */
+
+.product-image {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+#products img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+#products img:hover {
+    opacity: 1;
+}
+
+
+/* =========================
+   برچسب تخفیف
+========================= */
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background-color: #dc2626;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   جدول مقایسه
+========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-wrapper table {
+    width: 100%;
+    min-width: 450px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #2563eb;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+
+/* =========================
+   پاورقی
+========================= */
+
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   دکمه بازگشت به بالا
+========================= */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================
+   نمایش موبایل
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #products {
+        grid-template-columns: 1fr;
+    }
+
+    #products article {
+        width: 100%;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        min-width: 0;
+    }
+
+    form button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+
+/* =========================
+   نمایش تبلت
+========================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    main {
+        width: 92%;
+    }
+
+    #products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================
+   نمایش دسکتاپ
+========================= */
+
+@media (min-width: 901px) {
+
+    main {
+        width: 85%;
+        max-width: 1200px;
+    }
+
+    #products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
